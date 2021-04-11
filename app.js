@@ -11,12 +11,17 @@ let scene = new ScrollMagic.Scene({
 .addTo(controller)
 .setPin(intro)
 
+let easing = 0.1;
 let scrollpos = 0;
+let delay = 0;
 
 scene.on('update', e =>{
     scrollpos = e.scrollPos /1000;
 })
 
 setInterval(()=>{
-    video.currentTime = scrollpos;
+    delay += (scrollpos - delay) * easing;
+    console.log(scrollpos,delay)
+
+    video.currentTime = delay;
 },33.33)
