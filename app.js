@@ -4,7 +4,7 @@ const video = intro.querySelector("video")
 let controller = new ScrollMagic.Controller();
 
 let scene = new ScrollMagic.Scene({
-    duration: 6500,
+    duration: 23000,
     triggerElement: intro,
     triggerHook: 0
 })
